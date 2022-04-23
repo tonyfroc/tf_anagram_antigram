@@ -32,6 +32,7 @@ class Anagram
       true
     else
       false
+      "NO ACTUAL WORDS DETECTED!"
   end
 end
 
