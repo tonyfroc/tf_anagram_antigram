@@ -36,12 +36,28 @@ class Anagram
 end
 
   def is_anagram?()
-    if compare_length == true && check_vowels == true
-      if @word1 == @word2
-        "ANAGRAM CONFIRMED!"
-      end
-      else
+    if compare_length == true && check_vowels == true && @word1 == @word2
+      "ANAGRAM CONFIRMED!"
+    elsif 
+      is_antigram?() == true
+      "ANTIGRAM CONFIRMED!"
+    else
       "ANAGRAM DENIED!"
+    
+  end
+end
+
+def is_antigram?()
+  character_match_count = 0
+  @word1.each do |letter|
+    if @word2.include?(letter)
+      character_match_count += 1
+    end
+  end
+  if character_match_count == 0
+    true
+  else
+    false
   end
 end
 
