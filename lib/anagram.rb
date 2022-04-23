@@ -32,7 +32,7 @@ class Anagram
       true
     else
       false
-      "NO ACTUAL WORDS DETECTED!"
+      
   end
 end
 
@@ -42,9 +42,11 @@ end
     elsif 
       is_antigram?() == true
       "ANTIGRAM CONFIRMED!"
+    elsif
+      check_vowels() == false
+      "NO ACTUAL WORDS DETECTED!"
     else
       "ANAGRAM DENIED!"
-    
   end
 end
 
