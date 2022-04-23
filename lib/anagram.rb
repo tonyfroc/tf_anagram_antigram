@@ -2,6 +2,6 @@ require('pry')
 
 class Anagram
   def mod_string(str)
-    str.chars().sort(&:casecmp).join()
+    str.downcase().chars().sort(&:casecmp).join()
   end
 end
