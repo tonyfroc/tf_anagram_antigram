@@ -20,13 +20,19 @@ describe (Anagram) do
   describe ('#is_anagram?') do
     it("returns correct string for two words that are not anagrams") do
       word = Anagram.new("aBaC", "ABACe")
-      expect(word.is_anagram?()).to(eq("These words are not anagrams!"))
+      expect(word.is_anagram?()).to(eq("ANAGRAM DENIED!"))
         end
     it("returns correct string for two words that are anagrams") do
       word = Anagram.new("RUBY", "ubry")
-      expect(word.is_anagram?()).to(eq("These words are anagrams!"))
+      expect(word.is_anagram?()).to(eq("ANAGRAM CONFIRMED!"))
+        end
+  describe ('#is_antigram?') do
+    it("checks if two strings are antigrams") do
+      word = Anagram.new("test", "gray")
+      expect(word.is_antigram?()).to(eq("These words are antigrams!"))
         end
       end 
     end
   end
+end
 end
