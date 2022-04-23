@@ -3,16 +3,30 @@ require('spec_helper')
 require('anagram')
 
 describe (Anagram) do
-  describe ('#mod_string') do
-    it("downcases and splits the string, listing the letters alphabetically") do
-    word = Anagram.new("aBaC", "ABAC")
-    expect(word.mod_string("aBaC")).to(eq(["a","a","b","c"]))
+  describe ('#compare_length') do
+    it("checks if the two arrays are the same length") do
+      word = Anagram.new("aBaC", "ABACe")
+      expect(word.compare_length()).to(eq(false))
+        end
+  describe ('#check_vowels') do
+    it("checks if vowels are present in the array. If none are present, return false") do
+      word = Anagram.new("plkm", "plkm")
+      expect(word.check_vowels()).to(eq(false))
+        end
+    it("checks if vowels are present in the array. If vowels are present, return true") do
+      word = Anagram.new("Hello", "Raw")
+      expect(word.check_vowels()).to(eq(true))
+        end
+  describe ('#is_anagram?') do
+    it("returns correct string for two words that are not anagrams") do
+      word = Anagram.new("aBaC", "ABACe")
+      expect(word.is_anagram?()).to(eq("These words are not anagrams!"))
+        end
+    it("returns correct string for two words that are anagrams") do
+      word = Anagram.new("RUBY", "ubry")
+      expect(word.is_anagram?()).to(eq("These words are anagrams!"))
+        end
+      end 
     end
   end
-  describe ('#check_length') do
-    it("downcases and splits the string, listing the letters alphabetically") do
-    word = Anagram.new("aBaC", "ABACd")
-    expect(word.compare_length()).to(eq("These words are not anagrams because they are not the same length."))
-    end
-end
 end
