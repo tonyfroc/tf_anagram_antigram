@@ -11,7 +11,7 @@ describe (Anagram) do
   describe ('#check_vowels') do
     it("checks if vowels are present in the array. If none are present, return false") do
       word = Anagram.new("plkm", "plkm")
-      expect(word.check_vowels()).to(eq(false))
+      expect(word.check_vowels()).to(eq("NO ACTUAL WORDS DETECTED!"))
         end
     it("checks if vowels are present in the array. If vowels are present, return true") do
       word = Anagram.new("Hello", "Raw")
