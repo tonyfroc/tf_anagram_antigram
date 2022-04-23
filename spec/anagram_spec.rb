@@ -29,7 +29,7 @@ describe (Anagram) do
   describe ('#is_antigram?') do
     it("checks if two strings are antigrams") do
       word = Anagram.new("test", "gray")
-      expect(word.is_antigram?()).to(eq("These words are antigrams!"))
+      expect(word.is_antigram?()).to(eq("ANTIGRAM CONFIRMED!"))
         end
       end 
     end
