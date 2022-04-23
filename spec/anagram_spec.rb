@@ -26,10 +26,14 @@ describe (Anagram) do
       word = Anagram.new("RUBY", "ubry")
       expect(word.is_anagram?()).to(eq("ANAGRAM CONFIRMED!"))
         end
+    it("returns correct string for two words that are antigrams") do
+      word = Anagram.new("test", "gray")
+      expect(word.is_anagram?()).to(eq("ANTIGRAM CONFIRMED!"))
+        end    
   describe ('#is_antigram?') do
     it("checks if two strings are antigrams") do
       word = Anagram.new("test", "gray")
-      expect(word.is_antigram?()).to(eq("ANTIGRAM CONFIRMED!"))
+      expect(word.is_antigram?()).to(eq(true))
         end
       end 
     end
