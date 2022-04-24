@@ -2,8 +2,8 @@ require('pry')
 
 class Anagram
   def initialize(word1, word2)
-    @word1 = word1.gsub(/\s+/, "").downcase().chars().sort(&:casecmp).join().split("")
-    @word2 = word2.gsub(/\s+/, "").downcase().chars().sort(&:casecmp).join().split("")
+    @word1 = word1.gsub(/\s+/, "").gsub(/[!@#$%^&*()-=_+|;':",.<>?']/, '').downcase().chars().sort(&:casecmp).join().split("")
+    @word2 = word2.gsub(/\s+/, "").gsub(/[!@#$%^&*()-=_+|;':",.<>?']/, '').downcase().chars().sort(&:casecmp).join().split("")
   end
 
   def compare_length()
