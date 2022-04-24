@@ -1,6 +1,7 @@
 require('pry')
 
 class Anagram
+  # Trims white space, trims punctuation, downcases, sorts in alphabetical order, and returns an array in alphabetical order of only letters. 
   def initialize(word1, word2)
     @word1 = word1.gsub(/\s+/, "").gsub(/[!@#$%^&*()-=_+|;':",.<>?']/, '').downcase().chars().sort(&:casecmp).join().split("")
     @word2 = word2.gsub(/\s+/, "").gsub(/[!@#$%^&*()-=_+|;':",.<>?']/, '').downcase().chars().sort(&:casecmp).join().split("")
@@ -32,7 +33,6 @@ class Anagram
       true
     else
       false
-      
   end
 end
 
@@ -50,18 +50,18 @@ end
   end
 end
 
-def is_antigram?()
-  character_match_count = 0
-  @word1.each do |letter|
-    if @word2.include?(letter)
-      character_match_count += 1
+  def is_antigram?()
+    character_match_count = 0
+      @word1.each do |letter|
+        if @word2.include?(letter)
+        character_match_count += 1
+      end
+    end
+  if character_match_count == 0
+      true
+    else
+      false
     end
   end
-  if character_match_count == 0
-    true
-  else
-    false
-  end
-end
 
 end
