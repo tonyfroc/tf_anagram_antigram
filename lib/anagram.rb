@@ -38,15 +38,15 @@ end
 
   def is_anagram?()
     if compare_length == true && check_vowels == true && @word1 == @word2
-      "ANAGRAM CONFIRMED!"
+      "ANAGRAM DETECTED!"
     elsif 
       is_antigram?() == true
-      "ANTIGRAM CONFIRMED!"
+      "ANTIGRAM DETECTED!"
     elsif
       check_vowels() == false
       "NO ACTUAL WORDS DETECTED!"
     else
-      "ANAGRAM DENIED!"
+      "NO ANAGRAM DETECTED!"
   end
 end
 
