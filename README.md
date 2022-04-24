@@ -33,7 +33,7 @@ See `anagram_logic_spec.rb` in the `spec` folder.
 
 ## Known Bugs
 
-- No user interface built yet. 
+- Does not account for all non-words.  
 
 ## License
 
