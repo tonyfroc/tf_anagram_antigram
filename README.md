@@ -1,4 +1,4 @@
-# Anagram and Antigrams 
+# Anagrams and Antigrams 
 
 #### By Tony Froccaro
 
