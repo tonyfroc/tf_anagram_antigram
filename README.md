@@ -31,7 +31,6 @@ See `anagram_logic_spec.rb` in the `spec` folder.
 - Navigate to https://github.com/tonyfroc/tf_anagram_antigram
 - Select code, then copy the link below "Clone"
 - In terminal type:
-- `git init`
 - `git clone `https://github.com/tonyfroc/tf_anagram_antigram`
 - execute the following script from the root folder: `ruby ./lib/anagram_script.rb`
 
